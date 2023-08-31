@@ -1,4 +1,10 @@
 resource "local_file" "assignment" {
   filename = "output.txt"
-  content = "Argument 1: ${var.arg1}\nArgument 2: ${var.arg2}\nArgument 3: ${var.arg3}"
+  content = "Variable 1: ${var.result1}\nVariable 2: ${var.result2}\nVariable 3: ${var.result3}"
+
+  directory_permission = "0000"
+  file_permission = "0000"
+  # file_permission = "0222"
+  
+  # description = "Local file containing content"
 }
